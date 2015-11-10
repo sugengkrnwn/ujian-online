@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buku Tamu</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script-->
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <link rel="stylesheet" href="css/style.css" media="screen">  
+    <title>Buku Tamu</title>  
+
+  
+</head>
+<body>
+<center><h1> Ujian Online </h1><center>
+<body style= background-color:cyan>
+<nav class="navbar navbar-inverse"> 
+  <div class="container-red">
+    <div class="navbar-header">
+      <!--a class="navbar-brand" href="#">TEST</a-->
+          </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guru.html">Guru</a></li>
+        <li><a href="murid.html">Murid</a></li> 
+       <li class="active"><a href="bukutamu.html">Buku Tamu</a></li>
+      </ul>
+      <!--ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul-->
+    </div>
+  </div>
+</nav>
+  
+    <div id="wrapper">  
+      <form action="simpanBukuTamu.php" method="post" name="frmBukuTamu">  
+        <table border="0" align="center" width="100%">  
+          <caption><strong>Buku Tamu</strong></caption>  
+          <tr>  
+            <td>Nama</td>  
+            <td>:</td>  
+            <td><input type="text" name="nama" required="required" /></td>  
+          </tr>    
+          <tr>  
+            <td>Email</td>  
+            <td>:</td>  
+            <td><input type="email" name="email" required="required" /></td>  
+          </tr>  
+          <tr>  
+            <td valign="top">Pesan</td>  
+            <td valign="top">:</td>  
+            <td><textarea name="isi" cols="30" rows="15"></textarea></td>  
+          </tr>  
+          <tr>  
+            <td> </td>  
+            <td></td>  
+            <td><input type="submit" name="proses" value="Kirim" class="button">  
+              <input type="reset" name="batal" value="Batal" class="button">  
+              <a href="lihatBukuTamu.html" class="button">Lihat Buku Tamu</a>  
+            </td>  
+          </tr>  
+        </table>  
+      </form>  
+    </div>  
+ 
+</body>
+</html>

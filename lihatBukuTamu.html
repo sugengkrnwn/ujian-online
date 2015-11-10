@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml">  
+  <head>  
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <link rel="stylesheet" href="css/style.css" media="screen">  
+    <title>Daftar Buku Tamu</title>  
+    <script>  
+    //membuat fungsi konfirmasi sebelum didelete  
+    function konfirmasi(nama){  
+      tanya = confirm('PERHATIAN !!! \n Anda akan menghapus " '+ nama + ' " \n Lanjutkan ?');  
+        if (tanya == true)  
+          return true;  
+        else  
+          return false;  
+    };  
+    </script>  
+  </head>  
+  <body>  
+    <div id="wrapper_2">  
+
+    <table border="0" width="100%" cellpadding="0" cellspacing="0">  
+      <caption>Tampil Buku Tamu</caption>  
+      <tr>  
+        <th>No</th>  
+        <th>Nama</th>  
+        <th>Email</th>  
+        <th>Isi</th>  
+        <th>Aksi</th>  
+      </tr>  
+    <?php  
+    include "koneksi.php";  
+    $no=1;  
+    $ambil_data = mysql_query("select * from tbl_bukutamu order by id_bukutamu desc",$koneksi);  
+    while($hasil_data = mysql_fetch_array($ambil_data)){  
+    ?>  
+      <tr>  
+        <td><?=$no;?></td>  
+        <td><?=$hasil_data['nama'];?></td>  
+        <td><?=$hasil_data['email'];?></td>  
+        <td><?=$hasil_data['isi'];?></td>  
+        <td>  
+          <a href="hapusBukuTamu.php?id=<?=$hasil_data['id_bukutamu'];?>" class="button" onclick="return konfirmasi('<?=$hasil_data[nama];?>')"> Hapus </a>   
+          <a href="editBukuTamu.php?id=<?=$hasil_data['id_bukutamu'];?>" class="button"> Edit </a>  
+        </td>  
+      </tr>  
+    <?php   
+    $no++;  
+    }  
+    ?>  
+    </table>  
+    <a href="bukutamu.html">Tambah Buku Tamu</a>  
+    </div>  
+  </body>  
+  </html>  
